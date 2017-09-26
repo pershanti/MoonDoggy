@@ -1,0 +1,575 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		564685661F7B135C008C01DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564685651F7B135C008C01DD /* AppDelegate.swift */; };
+		564685681F7B135D008C01DD /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 564685671F7B135D008C01DD /* GameScene.sks */; };
+		5646856A1F7B135D008C01DD /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 564685691F7B135D008C01DD /* Actions.sks */; };
+		5646856C1F7B135D008C01DD /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5646856B1F7B135D008C01DD /* GameScene.swift */; };
+		5646856E1F7B135D008C01DD /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5646856D1F7B135D008C01DD /* GameViewController.swift */; };
+		564685711F7B135D008C01DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5646856F1F7B135D008C01DD /* Main.storyboard */; };
+		564685731F7B135D008C01DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 564685721F7B135D008C01DD /* Assets.xcassets */; };
+		564685761F7B135D008C01DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 564685741F7B135D008C01DD /* LaunchScreen.storyboard */; };
+		564685811F7B135D008C01DD /* DivOnMarsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564685801F7B135D008C01DD /* DivOnMarsTests.swift */; };
+		5646858C1F7B135D008C01DD /* DivOnMarsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5646858B1F7B135D008C01DD /* DivOnMarsUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5646857D1F7B135D008C01DD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5646855A1F7B135C008C01DD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 564685611F7B135C008C01DD;
+			remoteInfo = DivOnMars;
+		};
+		564685881F7B135D008C01DD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5646855A1F7B135C008C01DD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 564685611F7B135C008C01DD;
+			remoteInfo = DivOnMars;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		564685621F7B135C008C01DD /* DivOnMars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DivOnMars.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		564685651F7B135C008C01DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		564685671F7B135D008C01DD /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		564685691F7B135D008C01DD /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		5646856B1F7B135D008C01DD /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		5646856D1F7B135D008C01DD /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		564685701F7B135D008C01DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		564685721F7B135D008C01DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		564685751F7B135D008C01DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		564685771F7B135D008C01DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5646857C1F7B135D008C01DD /* DivOnMarsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DivOnMarsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		564685801F7B135D008C01DD /* DivOnMarsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DivOnMarsTests.swift; sourceTree = "<group>"; };
+		564685821F7B135D008C01DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		564685871F7B135D008C01DD /* DivOnMarsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DivOnMarsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5646858B1F7B135D008C01DD /* DivOnMarsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DivOnMarsUITests.swift; sourceTree = "<group>"; };
+		5646858D1F7B135D008C01DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5646855F1F7B135C008C01DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		564685791F7B135D008C01DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		564685841F7B135D008C01DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		564685591F7B135C008C01DD = {
+			isa = PBXGroup;
+			children = (
+				564685641F7B135C008C01DD /* DivOnMars */,
+				5646857F1F7B135D008C01DD /* DivOnMarsTests */,
+				5646858A1F7B135D008C01DD /* DivOnMarsUITests */,
+				564685631F7B135C008C01DD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		564685631F7B135C008C01DD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				564685621F7B135C008C01DD /* DivOnMars.app */,
+				5646857C1F7B135D008C01DD /* DivOnMarsTests.xctest */,
+				564685871F7B135D008C01DD /* DivOnMarsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		564685641F7B135C008C01DD /* DivOnMars */ = {
+			isa = PBXGroup;
+			children = (
+				564685651F7B135C008C01DD /* AppDelegate.swift */,
+				564685671F7B135D008C01DD /* GameScene.sks */,
+				564685691F7B135D008C01DD /* Actions.sks */,
+				5646856B1F7B135D008C01DD /* GameScene.swift */,
+				5646856D1F7B135D008C01DD /* GameViewController.swift */,
+				5646856F1F7B135D008C01DD /* Main.storyboard */,
+				564685721F7B135D008C01DD /* Assets.xcassets */,
+				564685741F7B135D008C01DD /* LaunchScreen.storyboard */,
+				564685771F7B135D008C01DD /* Info.plist */,
+			);
+			path = DivOnMars;
+			sourceTree = "<group>";
+		};
+		5646857F1F7B135D008C01DD /* DivOnMarsTests */ = {
+			isa = PBXGroup;
+			children = (
+				564685801F7B135D008C01DD /* DivOnMarsTests.swift */,
+				564685821F7B135D008C01DD /* Info.plist */,
+			);
+			path = DivOnMarsTests;
+			sourceTree = "<group>";
+		};
+		5646858A1F7B135D008C01DD /* DivOnMarsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5646858B1F7B135D008C01DD /* DivOnMarsUITests.swift */,
+				5646858D1F7B135D008C01DD /* Info.plist */,
+			);
+			path = DivOnMarsUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		564685611F7B135C008C01DD /* DivOnMars */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 564685901F7B135D008C01DD /* Build configuration list for PBXNativeTarget "DivOnMars" */;
+			buildPhases = (
+				5646855E1F7B135C008C01DD /* Sources */,
+				5646855F1F7B135C008C01DD /* Frameworks */,
+				564685601F7B135C008C01DD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DivOnMars;
+			productName = DivOnMars;
+			productReference = 564685621F7B135C008C01DD /* DivOnMars.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5646857B1F7B135D008C01DD /* DivOnMarsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 564685931F7B135D008C01DD /* Build configuration list for PBXNativeTarget "DivOnMarsTests" */;
+			buildPhases = (
+				564685781F7B135D008C01DD /* Sources */,
+				564685791F7B135D008C01DD /* Frameworks */,
+				5646857A1F7B135D008C01DD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5646857E1F7B135D008C01DD /* PBXTargetDependency */,
+			);
+			name = DivOnMarsTests;
+			productName = DivOnMarsTests;
+			productReference = 5646857C1F7B135D008C01DD /* DivOnMarsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		564685861F7B135D008C01DD /* DivOnMarsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 564685961F7B135D008C01DD /* Build configuration list for PBXNativeTarget "DivOnMarsUITests" */;
+			buildPhases = (
+				564685831F7B135D008C01DD /* Sources */,
+				564685841F7B135D008C01DD /* Frameworks */,
+				564685851F7B135D008C01DD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				564685891F7B135D008C01DD /* PBXTargetDependency */,
+			);
+			name = DivOnMarsUITests;
+			productName = DivOnMarsUITests;
+			productReference = 564685871F7B135D008C01DD /* DivOnMarsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5646855A1F7B135C008C01DD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Shantini Vyas";
+				TargetAttributes = {
+					564685611F7B135C008C01DD = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					5646857B1F7B135D008C01DD = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 564685611F7B135C008C01DD;
+					};
+					564685861F7B135D008C01DD = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 564685611F7B135C008C01DD;
+					};
+				};
+			};
+			buildConfigurationList = 5646855D1F7B135C008C01DD /* Build configuration list for PBXProject "DivOnMars" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 564685591F7B135C008C01DD;
+			productRefGroup = 564685631F7B135C008C01DD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				564685611F7B135C008C01DD /* DivOnMars */,
+				5646857B1F7B135D008C01DD /* DivOnMarsTests */,
+				564685861F7B135D008C01DD /* DivOnMarsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		564685601F7B135C008C01DD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				564685711F7B135D008C01DD /* Main.storyboard in Resources */,
+				564685681F7B135D008C01DD /* GameScene.sks in Resources */,
+				564685731F7B135D008C01DD /* Assets.xcassets in Resources */,
+				564685761F7B135D008C01DD /* LaunchScreen.storyboard in Resources */,
+				5646856A1F7B135D008C01DD /* Actions.sks in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5646857A1F7B135D008C01DD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		564685851F7B135D008C01DD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5646855E1F7B135C008C01DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5646856C1F7B135D008C01DD /* GameScene.swift in Sources */,
+				5646856E1F7B135D008C01DD /* GameViewController.swift in Sources */,
+				564685661F7B135C008C01DD /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		564685781F7B135D008C01DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				564685811F7B135D008C01DD /* DivOnMarsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		564685831F7B135D008C01DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5646858C1F7B135D008C01DD /* DivOnMarsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5646857E1F7B135D008C01DD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 564685611F7B135C008C01DD /* DivOnMars */;
+			targetProxy = 5646857D1F7B135D008C01DD /* PBXContainerItemProxy */;
+		};
+		564685891F7B135D008C01DD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 564685611F7B135C008C01DD /* DivOnMars */;
+			targetProxy = 564685881F7B135D008C01DD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5646856F1F7B135D008C01DD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				564685701F7B135D008C01DD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		564685741F7B135D008C01DD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				564685751F7B135D008C01DD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5646858E1F7B135D008C01DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5646858F1F7B135D008C01DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		564685911F7B135D008C01DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LVLYB83ZJM;
+				INFOPLIST_FILE = DivOnMars/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.DivOnMars;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		564685921F7B135D008C01DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LVLYB83ZJM;
+				INFOPLIST_FILE = DivOnMars/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.DivOnMars;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		564685941F7B135D008C01DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LVLYB83ZJM;
+				INFOPLIST_FILE = DivOnMarsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.DivOnMarsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DivOnMars.app/DivOnMars";
+			};
+			name = Debug;
+		};
+		564685951F7B135D008C01DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LVLYB83ZJM;
+				INFOPLIST_FILE = DivOnMarsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.DivOnMarsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DivOnMars.app/DivOnMars";
+			};
+			name = Release;
+		};
+		564685971F7B135D008C01DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LVLYB83ZJM;
+				INFOPLIST_FILE = DivOnMarsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.DivOnMarsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DivOnMars;
+			};
+			name = Debug;
+		};
+		564685981F7B135D008C01DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LVLYB83ZJM;
+				INFOPLIST_FILE = DivOnMarsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.DivOnMarsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DivOnMars;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5646855D1F7B135C008C01DD /* Build configuration list for PBXProject "DivOnMars" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5646858E1F7B135D008C01DD /* Debug */,
+				5646858F1F7B135D008C01DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		564685901F7B135D008C01DD /* Build configuration list for PBXNativeTarget "DivOnMars" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				564685911F7B135D008C01DD /* Debug */,
+				564685921F7B135D008C01DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		564685931F7B135D008C01DD /* Build configuration list for PBXNativeTarget "DivOnMarsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				564685941F7B135D008C01DD /* Debug */,
+				564685951F7B135D008C01DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		564685961F7B135D008C01DD /* Build configuration list for PBXNativeTarget "DivOnMarsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				564685971F7B135D008C01DD /* Debug */,
+				564685981F7B135D008C01DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5646855A1F7B135C008C01DD /* Project object */;
+}
