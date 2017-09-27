@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		564685661F7B135C008C01DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564685651F7B135C008C01DD /* AppDelegate.swift */; };
-		564685681F7B135D008C01DD /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 564685671F7B135D008C01DD /* GameScene.sks */; };
 		5646856A1F7B135D008C01DD /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 564685691F7B135D008C01DD /* Actions.sks */; };
 		5646856C1F7B135D008C01DD /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5646856B1F7B135D008C01DD /* GameScene.swift */; };
 		5646856E1F7B135D008C01DD /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5646856D1F7B135D008C01DD /* GameViewController.swift */; };
@@ -17,6 +16,7 @@
 		564685761F7B135D008C01DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 564685741F7B135D008C01DD /* LaunchScreen.storyboard */; };
 		564685811F7B135D008C01DD /* DivOnMarsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564685801F7B135D008C01DD /* DivOnMarsTests.swift */; };
 		5646858C1F7B135D008C01DD /* DivOnMarsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5646858B1F7B135D008C01DD /* DivOnMarsUITests.swift */; };
+		569F397C1F7B930200FFD083 /* dogWalkClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569F397B1F7B930200FFD083 /* dogWalkClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,9 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		564685621F7B135C008C01DD /* DivOnMars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DivOnMars.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		564685621F7B135C008C01DD /* MoonDoggy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoonDoggy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		564685651F7B135C008C01DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		564685671F7B135D008C01DD /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		564685691F7B135D008C01DD /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		5646856B1F7B135D008C01DD /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		5646856D1F7B135D008C01DD /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
@@ -47,12 +46,13 @@
 		564685721F7B135D008C01DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		564685751F7B135D008C01DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		564685771F7B135D008C01DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5646857C1F7B135D008C01DD /* DivOnMarsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DivOnMarsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5646857C1F7B135D008C01DD /* MoonDoggyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoonDoggyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		564685801F7B135D008C01DD /* DivOnMarsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DivOnMarsTests.swift; sourceTree = "<group>"; };
 		564685821F7B135D008C01DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		564685871F7B135D008C01DD /* DivOnMarsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DivOnMarsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		564685871F7B135D008C01DD /* MoonDoggyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoonDoggyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5646858B1F7B135D008C01DD /* DivOnMarsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DivOnMarsUITests.swift; sourceTree = "<group>"; };
 		5646858D1F7B135D008C01DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		569F397B1F7B930200FFD083 /* dogWalkClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dogWalkClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,9 +93,9 @@
 		564685631F7B135C008C01DD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				564685621F7B135C008C01DD /* DivOnMars.app */,
-				5646857C1F7B135D008C01DD /* DivOnMarsTests.xctest */,
-				564685871F7B135D008C01DD /* DivOnMarsUITests.xctest */,
+				564685621F7B135C008C01DD /* MoonDoggy.app */,
+				5646857C1F7B135D008C01DD /* MoonDoggyTests.xctest */,
+				564685871F7B135D008C01DD /* MoonDoggyUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -104,11 +104,11 @@
 			isa = PBXGroup;
 			children = (
 				564685651F7B135C008C01DD /* AppDelegate.swift */,
-				564685671F7B135D008C01DD /* GameScene.sks */,
 				564685691F7B135D008C01DD /* Actions.sks */,
 				5646856B1F7B135D008C01DD /* GameScene.swift */,
 				5646856D1F7B135D008C01DD /* GameViewController.swift */,
 				5646856F1F7B135D008C01DD /* Main.storyboard */,
+				569F397B1F7B930200FFD083 /* dogWalkClass.swift */,
 				564685721F7B135D008C01DD /* Assets.xcassets */,
 				564685741F7B135D008C01DD /* LaunchScreen.storyboard */,
 				564685771F7B135D008C01DD /* Info.plist */,
@@ -137,9 +137,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		564685611F7B135C008C01DD /* DivOnMars */ = {
+		564685611F7B135C008C01DD /* MoonDoggy */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 564685901F7B135D008C01DD /* Build configuration list for PBXNativeTarget "DivOnMars" */;
+			buildConfigurationList = 564685901F7B135D008C01DD /* Build configuration list for PBXNativeTarget "MoonDoggy" */;
 			buildPhases = (
 				5646855E1F7B135C008C01DD /* Sources */,
 				5646855F1F7B135C008C01DD /* Frameworks */,
@@ -149,14 +149,14 @@
 			);
 			dependencies = (
 			);
-			name = DivOnMars;
+			name = MoonDoggy;
 			productName = DivOnMars;
-			productReference = 564685621F7B135C008C01DD /* DivOnMars.app */;
+			productReference = 564685621F7B135C008C01DD /* MoonDoggy.app */;
 			productType = "com.apple.product-type.application";
 		};
-		5646857B1F7B135D008C01DD /* DivOnMarsTests */ = {
+		5646857B1F7B135D008C01DD /* MoonDoggyTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 564685931F7B135D008C01DD /* Build configuration list for PBXNativeTarget "DivOnMarsTests" */;
+			buildConfigurationList = 564685931F7B135D008C01DD /* Build configuration list for PBXNativeTarget "MoonDoggyTests" */;
 			buildPhases = (
 				564685781F7B135D008C01DD /* Sources */,
 				564685791F7B135D008C01DD /* Frameworks */,
@@ -167,14 +167,14 @@
 			dependencies = (
 				5646857E1F7B135D008C01DD /* PBXTargetDependency */,
 			);
-			name = DivOnMarsTests;
+			name = MoonDoggyTests;
 			productName = DivOnMarsTests;
-			productReference = 5646857C1F7B135D008C01DD /* DivOnMarsTests.xctest */;
+			productReference = 5646857C1F7B135D008C01DD /* MoonDoggyTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		564685861F7B135D008C01DD /* DivOnMarsUITests */ = {
+		564685861F7B135D008C01DD /* MoonDoggyUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 564685961F7B135D008C01DD /* Build configuration list for PBXNativeTarget "DivOnMarsUITests" */;
+			buildConfigurationList = 564685961F7B135D008C01DD /* Build configuration list for PBXNativeTarget "MoonDoggyUITests" */;
 			buildPhases = (
 				564685831F7B135D008C01DD /* Sources */,
 				564685841F7B135D008C01DD /* Frameworks */,
@@ -185,9 +185,9 @@
 			dependencies = (
 				564685891F7B135D008C01DD /* PBXTargetDependency */,
 			);
-			name = DivOnMarsUITests;
+			name = MoonDoggyUITests;
 			productName = DivOnMarsUITests;
-			productReference = 564685871F7B135D008C01DD /* DivOnMarsUITests.xctest */;
+			productReference = 564685871F7B135D008C01DD /* MoonDoggyUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -216,7 +216,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 5646855D1F7B135C008C01DD /* Build configuration list for PBXProject "DivOnMars" */;
+			buildConfigurationList = 5646855D1F7B135C008C01DD /* Build configuration list for PBXProject "MoonDoggy" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -229,9 +229,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				564685611F7B135C008C01DD /* DivOnMars */,
-				5646857B1F7B135D008C01DD /* DivOnMarsTests */,
-				564685861F7B135D008C01DD /* DivOnMarsUITests */,
+				564685611F7B135C008C01DD /* MoonDoggy */,
+				5646857B1F7B135D008C01DD /* MoonDoggyTests */,
+				564685861F7B135D008C01DD /* MoonDoggyUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -242,7 +242,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				564685711F7B135D008C01DD /* Main.storyboard in Resources */,
-				564685681F7B135D008C01DD /* GameScene.sks in Resources */,
 				564685731F7B135D008C01DD /* Assets.xcassets in Resources */,
 				564685761F7B135D008C01DD /* LaunchScreen.storyboard in Resources */,
 				5646856A1F7B135D008C01DD /* Actions.sks in Resources */,
@@ -270,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				569F397C1F7B930200FFD083 /* dogWalkClass.swift in Sources */,
 				5646856C1F7B135D008C01DD /* GameScene.swift in Sources */,
 				5646856E1F7B135D008C01DD /* GameViewController.swift in Sources */,
 				564685661F7B135C008C01DD /* AppDelegate.swift in Sources */,
@@ -297,12 +297,12 @@
 /* Begin PBXTargetDependency section */
 		5646857E1F7B135D008C01DD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 564685611F7B135C008C01DD /* DivOnMars */;
+			target = 564685611F7B135C008C01DD /* MoonDoggy */;
 			targetProxy = 5646857D1F7B135D008C01DD /* PBXContainerItemProxy */;
 		};
 		564685891F7B135D008C01DD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 564685611F7B135C008C01DD /* DivOnMars */;
+			target = 564685611F7B135C008C01DD /* MoonDoggy */;
 			targetProxy = 564685881F7B135D008C01DD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -477,7 +477,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DivOnMars.app/DivOnMars";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MoonDoggy.app/MoonDoggy";
 			};
 			name = Debug;
 		};
@@ -494,7 +494,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DivOnMars.app/DivOnMars";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MoonDoggy.app/MoonDoggy";
 			};
 			name = Release;
 		};
@@ -533,7 +533,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5646855D1F7B135C008C01DD /* Build configuration list for PBXProject "DivOnMars" */ = {
+		5646855D1F7B135C008C01DD /* Build configuration list for PBXProject "MoonDoggy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5646858E1F7B135D008C01DD /* Debug */,
@@ -542,7 +542,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		564685901F7B135D008C01DD /* Build configuration list for PBXNativeTarget "DivOnMars" */ = {
+		564685901F7B135D008C01DD /* Build configuration list for PBXNativeTarget "MoonDoggy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				564685911F7B135D008C01DD /* Debug */,
@@ -551,7 +551,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		564685931F7B135D008C01DD /* Build configuration list for PBXNativeTarget "DivOnMarsTests" */ = {
+		564685931F7B135D008C01DD /* Build configuration list for PBXNativeTarget "MoonDoggyTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				564685941F7B135D008C01DD /* Debug */,
@@ -560,7 +560,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		564685961F7B135D008C01DD /* Build configuration list for PBXNativeTarget "DivOnMarsUITests" */ = {
+		564685961F7B135D008C01DD /* Build configuration list for PBXNativeTarget "MoonDoggyUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				564685971F7B135D008C01DD /* Debug */,
