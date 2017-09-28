@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import DivOnMars
+@testable import MoonDoggy
 
 class DivOnMarsTests: XCTestCase {
     

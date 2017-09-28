@@ -16,7 +16,9 @@
 		564685761F7B135D008C01DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 564685741F7B135D008C01DD /* LaunchScreen.storyboard */; };
 		564685811F7B135D008C01DD /* DivOnMarsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564685801F7B135D008C01DD /* DivOnMarsTests.swift */; };
 		5646858C1F7B135D008C01DD /* DivOnMarsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5646858B1F7B135D008C01DD /* DivOnMarsUITests.swift */; };
+		5696F8AF1F7C55CB00C4DB16 /* MainScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5696F8AE1F7C55CB00C4DB16 /* MainScene.sks */; };
 		569F397C1F7B930200FFD083 /* dogWalkClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569F397B1F7B930200FFD083 /* dogWalkClass.swift */; };
+		56C8EC3D1F7CD13E00EEAD7A /* Zombie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C8EC3C1F7CD13E00EEAD7A /* Zombie.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +54,9 @@
 		564685871F7B135D008C01DD /* MoonDoggyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoonDoggyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5646858B1F7B135D008C01DD /* DivOnMarsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DivOnMarsUITests.swift; sourceTree = "<group>"; };
 		5646858D1F7B135D008C01DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5696F8AE1F7C55CB00C4DB16 /* MainScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MainScene.sks; sourceTree = "<group>"; };
 		569F397B1F7B930200FFD083 /* dogWalkClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dogWalkClass.swift; sourceTree = "<group>"; };
+		56C8EC3C1F7CD13E00EEAD7A /* Zombie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zombie.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,8 +109,10 @@
 			children = (
 				564685651F7B135C008C01DD /* AppDelegate.swift */,
 				564685691F7B135D008C01DD /* Actions.sks */,
+				5696F8AE1F7C55CB00C4DB16 /* MainScene.sks */,
 				5646856B1F7B135D008C01DD /* GameScene.swift */,
 				5646856D1F7B135D008C01DD /* GameViewController.swift */,
+				56C8EC3C1F7CD13E00EEAD7A /* Zombie.swift */,
 				5646856F1F7B135D008C01DD /* Main.storyboard */,
 				569F397B1F7B930200FFD083 /* dogWalkClass.swift */,
 				564685721F7B135D008C01DD /* Assets.xcassets */,
@@ -243,6 +249,7 @@
 			files = (
 				564685711F7B135D008C01DD /* Main.storyboard in Resources */,
 				564685731F7B135D008C01DD /* Assets.xcassets in Resources */,
+				5696F8AF1F7C55CB00C4DB16 /* MainScene.sks in Resources */,
 				564685761F7B135D008C01DD /* LaunchScreen.storyboard in Resources */,
 				5646856A1F7B135D008C01DD /* Actions.sks in Resources */,
 			);
@@ -273,6 +280,7 @@
 				5646856C1F7B135D008C01DD /* GameScene.swift in Sources */,
 				5646856E1F7B135D008C01DD /* GameViewController.swift in Sources */,
 				564685661F7B135C008C01DD /* AppDelegate.swift in Sources */,
+				56C8EC3D1F7CD13E00EEAD7A /* Zombie.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
