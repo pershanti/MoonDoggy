@@ -9,42 +9,162 @@
 import SpriteKit
 import GameplayKit
 
-class GameScene: SKScene {
+class GameScene: SKScene, SKPhysicsContactDelegate {
     
     var viewController: UIViewController?
     var dogsprite: SKSpriteNode?
     var zombieSprite: SKSpriteNode?
+    var healthSprite = SKSpriteNode()
+    var groundSprite = Ground()
+    
+    let array = ["bone", "cheese", "mailman", "bear"]
+    var health = 0
+    
     var groundCollisionCategory: UInt32 = 0x1 << 1
     var dogCollisionCategory: UInt32 = 0x1 << 2
-    
-    
-    func animateGround(){
-        let cTexture = SKTexture(imageNamed:"space-layer-1")
-        for i in 0 ... 1 {
-            let craters = SKSpriteNode(texture: cTexture)
-            craters.size.height = 80
-            craters.size.width = 700
-            craters.position = CGPoint(x: (700 * CGFloat(i)) - CGFloat(1 * i), y: -175)
-            craters.zPosition = -1
-            addChild(craters)
-            let moveLeft = SKAction.moveBy(x: -700, y: 0, duration: 5)
-            let moveReset = SKAction.moveBy(x: 700, y: 0, duration: 0)
-            let moveLoop = SKAction.sequence([moveLeft, moveReset])
-            let moveForever = SKAction.repeatForever(moveLoop)
-            craters.run(moveForever)
-            craters.physicsBody = SKPhysicsBody(rectangleOf: craters.size)
-            craters.physicsBody?.categoryBitMask = groundCollisionCategory
-            craters.physicsBody?.contactTestBitMask = dogCollisionCategory
-            craters.physicsBody?.affectedByGravity = false
-            craters.physicsBody?.isDynamic = false
-            craters.physicsBody?.mass = 1000
-            craters.physicsBody?.restitution = 0.5
-            
-        }
-    }
+    var badCollisionCategory: UInt32 = 0x1 << 3
+    var goodCollisionCategory: UInt32 = 0x1 << 4
+
     func bump(node: SKSpriteNode){
         let jump = SKAction.moveBy(x: 0, y: 100, duration: 2)
         node.run(jump)
+    }
+    
+    
+
+    func didBegin(_ contact: SKPhysicsContact) {
+        let a: SKSpriteNode = contact.bodyA.node as! SKSpriteNode
+        let b: SKSpriteNode = contact.bodyB.node as! SKSpriteNode
+
+        if a == dogsprite || b == dogsprite{
+            if a.name == "bone" || b.name == "bone"{
+                print("bone")
+                self.updateHealth(by: 1)
+                print(self.health)
+            }
+            else if a.name == "cheese" || b.name == "cheese"{
+                print("cheese")
+                self.updateHealth(by: 2)
+                print(self.health)
+
+            }
+            else if a.name == "mailman" || b.name == "mailman"{
+                print("mailman")
+                self.updateHealth(by: -1)
+                print(self.health)
+
+            }
+            else if a.name == "bear" || b.name == "bear"{
+                print("bear")
+                groundSprite.stopGround(scene: self)
+                let runAway = SKAction.moveBy(x: 300, y: 0, duration: 2)
+                self.goToSleep()
+                zombieSprite?.run(runAway)
+            }
+            
+            else if a.name == "zombie" || b.name == "zombie"{
+                self.winGame()
+            }
+            
+            if self.health == 0{
+                self.endGame()
+            }
+            
+            else if self.health == 10{
+                self.winGame()
+            }
+         }
+        
+    }
+    
+    func winGame(){
+        let wait = SKAction.wait(forDuration: 4)
+        let change = SKAction.run{
+            let transition = SKTransition.doorsCloseVertical(withDuration: 2)
+            let scene = SKScene(fileNamed: "YouLose")!
+            self.view?.presentScene(scene, transition:transition)
+        }
+        let sequence = SKAction.sequence([wait, change])
+        run(sequence)
+    }
+    
+    func endGame(){
+        let wait = SKAction.wait(forDuration: 4)
+        let change = SKAction.run{
+            let transition = SKTransition.doorsCloseVertical(withDuration: 2)
+            let scene = SKScene(fileNamed: "YouLose")!
+            self.view?.presentScene(scene, transition:transition)
+        }
+        let sequence = SKAction.sequence([wait, change])
+        run(sequence)
+    }
+    
+    func faster(){
+        let runFast = SKAction.moveBy(x: 100, y: 0, duration: 1)
+        dogsprite!.run(runFast)
+    }
+    
+    func slower(){
+        let slowDown = SKAction.moveBy(x: -100, y: 0, duration: 1)
+        let wait = SKAction.wait(forDuration: 5)
+        let speedUp = SKAction.moveBy(x: 100, y: 0, duration: 1)
+        let sequence = SKAction.sequence([slowDown, wait, speedUp])
+    }
+    
+    func goToSleep(){
+        let position = dogsprite?.position
+        let size = dogsprite?.size
+        dogsprite?.removeFromParent()
+        let dog = dogSleep()
+        let drift = SKAction.move(to: CGPoint(x: -200, y:-360), duration: 3)
+        let sleep = SKAction.animate(with: dog.walk(), timePerFrame: 0.33)
+        dogsprite = SKSpriteNode(texture: dog._00())
+        dogsprite!.position = position!
+        dogsprite!.size = size!
+        addChild(dogsprite!)
+        let sequence = SKAction.sequence([drift, sleep])
+        dogsprite!.run(sequence)
+    }
+    
+    func displayHealth(){
+        healthSprite.removeAllChildren()
+        for i in 0..<self.health{
+            let heart = SKSpriteNode(imageNamed: "heart")
+            heart.position = CGPoint(x: -300 + i*70, y: 160)
+            heart.size = CGSize(width: 50, height: 50)
+            healthSprite.addChild(heart)
+        }
+    }
+    func createSprite(sprite: String){
+       let newSprite = SKSpriteNode(imageNamed: sprite)
+        newSprite.size = CGSize(width: 75, height: 75)
+        newSprite.position = CGPoint(x: 0, y: 0)
+        newSprite.physicsBody = SKPhysicsBody(circleOfRadius: 10)
+        newSprite.physicsBody?.affectedByGravity = false
+        newSprite.physicsBody?.allowsRotation = false
+        newSprite.name = sprite
+        addChild(newSprite)
+        let fly = SKAction.moveBy(x:-250, y:-100, duration: 10)
+        let remove = SKAction.removeFromParent()
+        let sequence = SKAction.sequence([fly, remove])
+        newSprite.run(sequence)
+    }
+
+    
+    func deploySprites(){
+        let create = SKAction.run { [unowned self] in
+            self.displaySprites()
+        }
+        let wait = SKAction.wait(forDuration: 10)
+        let sequence = SKAction.sequence([wait, create])
+        let repeatForever = SKAction.repeatForever(sequence)
+        run(repeatForever)
+    }
+    
+    
+    func displaySprites(){
+        let spritenum = Int(arc4random_uniform(4))
+        createSprite(sprite: self.array[spritenum])
     }
     
     func createSatellite(){
@@ -65,7 +185,6 @@ class GameScene: SKScene {
         
     }
     func createCharacter(){
-        self.physicsWorld.gravity = CGVector(dx: 0, dy: -1.6)
         let dog = dogWalkClass()
         dogsprite = SKSpriteNode(texture: dog._01())
         let range = SKRange(upperLimit: 200)
@@ -79,38 +198,46 @@ class GameScene: SKScene {
         dogsprite!.size.width = 150
         dogsprite!.physicsBody = SKPhysicsBody(circleOfRadius: 20)
         dogsprite!.physicsBody?.affectedByGravity = true
+        dogsprite!.physicsBody?.allowsRotation = false
         dogsprite!.physicsBody?.mass = 13
         dogsprite!.physicsBody?.categoryBitMask = dogCollisionCategory
+        dogsprite!.physicsBody!.contactTestBitMask = dogsprite!.physicsBody!.collisionBitMask
         addChild(dogsprite!)
         dogsprite!.run(walkForever)
     }
-    
+
     func createZombie(){
-        let zombie = Zombie()
-        zombieSprite = SKSpriteNode(texture: zombie._01())
+        let new_zombie = zombieClass()
+        zombieSprite = SKSpriteNode(texture: new_zombie._01())
         let range = SKRange(upperLimit: 200)
         let lockToCenter = SKConstraint.positionY(range)
         zombieSprite!.constraints = [ lockToCenter ]
-        let walk = SKAction.animate(with: zombie.walk(), timePerFrame: 0.033)
+        let walk = SKAction.animate(with: new_zombie.walk(), timePerFrame: 0.033)
         let walkForever = SKAction.repeatForever(walk)
-        zombieSprite!.position = CGPoint(x: 0, y: 0)
+        zombieSprite!.position = CGPoint(x: 150, y: 0)
         zombieSprite!.zPosition = 0
         zombieSprite!.size.height = 150
         zombieSprite!.size.width = 150
         zombieSprite!.physicsBody = SKPhysicsBody(circleOfRadius: 20)
         zombieSprite!.physicsBody?.affectedByGravity = true
         zombieSprite!.physicsBody?.mass = 40
-        zombieSprite!.physicsBody?.categoryBitMask = dogCollisionCategory
         addChild(zombieSprite!)
         zombieSprite!.run(walkForever)
     }
     
     
+
     override func sceneDidLoad() {
-        animateGround()
+        self.physicsWorld.gravity = CGVector(dx: 0, dy: -1.6)
+        physicsWorld.contactDelegate = self
+        groundSprite.animateGround(scene: self)
         createCharacter()
         createSatellite()
         createZombie()
+        deploySprites()
+        addChild(healthSprite)
+        self.health = 5
+        displayHealth()
     }
     
     
@@ -118,5 +245,8 @@ class GameScene: SKScene {
         bump(node: dogsprite!)
     }
     
-    
+    func updateHealth(by: Int){
+        self.health  = self.health + by
+        displayHealth()
+    }
 }

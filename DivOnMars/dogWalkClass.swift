@@ -11,13 +11,13 @@ import SpriteKit
 class dogWalkClass {
 
     // sprite names
-    let _0 = "0"
-    let _1 = "1"
-    let _2 = "2"
-    let _3 = "3"
-    let _4 = "4"
-    let _5 = "5"
-    let _6 = "6"
+    let _0 = "20"
+    let _1 = "21"
+    let _2 = "22"
+    let _3 = "23"
+    let _4 = "24"
+    let _5 = "25"
+    let _6 = "26"
 
 
     // load texture atlas

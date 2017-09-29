@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		560B052D1F7CE63200F7C3DB /* thesting.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 561B423E1F7CDDFB00019788 /* thesting.mp3 */; };
+		560B052E1F7CE63300F7C3DB /* thesting.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 561B423E1F7CDDFB00019788 /* thesting.mp3 */; };
+		560B052F1F7CE63400F7C3DB /* thesting.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 561B423E1F7CDDFB00019788 /* thesting.mp3 */; };
+		560B05331F7DCF9200F7C3DB /* ritz.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 560B05321F7DCDF800F7C3DB /* ritz.mp3 */; };
+		560B05371F7DF36200F7C3DB /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560B05361F7DF36100F7C3DB /* SplashScreen.swift */; };
 		564685661F7B135C008C01DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564685651F7B135C008C01DD /* AppDelegate.swift */; };
 		5646856A1F7B135D008C01DD /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 564685691F7B135D008C01DD /* Actions.sks */; };
 		5646856C1F7B135D008C01DD /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5646856B1F7B135D008C01DD /* GameScene.swift */; };
@@ -16,9 +21,18 @@
 		564685761F7B135D008C01DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 564685741F7B135D008C01DD /* LaunchScreen.storyboard */; };
 		564685811F7B135D008C01DD /* DivOnMarsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564685801F7B135D008C01DD /* DivOnMarsTests.swift */; };
 		5646858C1F7B135D008C01DD /* DivOnMarsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5646858B1F7B135D008C01DD /* DivOnMarsUITests.swift */; };
+		565B17B51F7E556F00B1BB64 /* dogWin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565B17B41F7E556F00B1BB64 /* dogWin.swift */; };
+		565B17B71F7E557C00B1BB64 /* dogSleep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565B17B61F7E557C00B1BB64 /* dogSleep.swift */; };
+		565B17B91F7E558E00B1BB64 /* zombieDie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565B17B81F7E558E00B1BB64 /* zombieDie.swift */; };
+		565B17BB1F7E570600B1BB64 /* Ground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565B17BA1F7E570600B1BB64 /* Ground.swift */; };
+		565B17BD1F7E5C4600B1BB64 /* YouLose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565B17BC1F7E5C4600B1BB64 /* YouLose.swift */; };
+		565B17BF1F7E5C6700B1BB64 /* YouLose.sks in Resources */ = {isa = PBXBuildFile; fileRef = 565B17BE1F7E5C6700B1BB64 /* YouLose.sks */; };
+		565B17C11F7E664200B1BB64 /* YouWin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565B17C01F7E664200B1BB64 /* YouWin.swift */; };
+		565B17C31F7E665200B1BB64 /* YouWin.sks in Resources */ = {isa = PBXBuildFile; fileRef = 565B17C21F7E665200B1BB64 /* YouWin.sks */; };
+		5665E5B21F7E23B400311F21 /* SplashScreen.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5665E5B11F7E1F2D00311F21 /* SplashScreen.sks */; };
 		5696F8AF1F7C55CB00C4DB16 /* MainScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5696F8AE1F7C55CB00C4DB16 /* MainScene.sks */; };
 		569F397C1F7B930200FFD083 /* dogWalkClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569F397B1F7B930200FFD083 /* dogWalkClass.swift */; };
-		56C8EC3D1F7CD13E00EEAD7A /* Zombie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C8EC3C1F7CD13E00EEAD7A /* Zombie.swift */; };
+		56C8EC3D1F7CD13E00EEAD7A /* zombieClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C8EC3C1F7CD13E00EEAD7A /* zombieClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +53,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		560B05321F7DCDF800F7C3DB /* ritz.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ritz.mp3; sourceTree = "<group>"; };
+		560B05361F7DF36100F7C3DB /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
+		561B423E1F7CDDFB00019788 /* thesting.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = thesting.mp3; path = DivOnMars/thesting.mp3; sourceTree = SOURCE_ROOT; };
 		564685621F7B135C008C01DD /* MoonDoggy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoonDoggy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		564685651F7B135C008C01DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		564685691F7B135D008C01DD /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
@@ -54,9 +71,18 @@
 		564685871F7B135D008C01DD /* MoonDoggyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoonDoggyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5646858B1F7B135D008C01DD /* DivOnMarsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DivOnMarsUITests.swift; sourceTree = "<group>"; };
 		5646858D1F7B135D008C01DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		565B17B41F7E556F00B1BB64 /* dogWin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dogWin.swift; sourceTree = "<group>"; };
+		565B17B61F7E557C00B1BB64 /* dogSleep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dogSleep.swift; sourceTree = "<group>"; };
+		565B17B81F7E558E00B1BB64 /* zombieDie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zombieDie.swift; sourceTree = "<group>"; };
+		565B17BA1F7E570600B1BB64 /* Ground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ground.swift; sourceTree = "<group>"; };
+		565B17BC1F7E5C4600B1BB64 /* YouLose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouLose.swift; sourceTree = "<group>"; };
+		565B17BE1F7E5C6700B1BB64 /* YouLose.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = YouLose.sks; sourceTree = "<group>"; };
+		565B17C01F7E664200B1BB64 /* YouWin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouWin.swift; sourceTree = "<group>"; };
+		565B17C21F7E665200B1BB64 /* YouWin.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = YouWin.sks; sourceTree = "<group>"; };
+		5665E5B11F7E1F2D00311F21 /* SplashScreen.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SplashScreen.sks; sourceTree = "<group>"; };
 		5696F8AE1F7C55CB00C4DB16 /* MainScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MainScene.sks; sourceTree = "<group>"; };
 		569F397B1F7B930200FFD083 /* dogWalkClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dogWalkClass.swift; sourceTree = "<group>"; };
-		56C8EC3C1F7CD13E00EEAD7A /* Zombie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zombie.swift; sourceTree = "<group>"; };
+		56C8EC3C1F7CD13E00EEAD7A /* zombieClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zombieClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,10 +137,22 @@
 				564685691F7B135D008C01DD /* Actions.sks */,
 				5696F8AE1F7C55CB00C4DB16 /* MainScene.sks */,
 				5646856B1F7B135D008C01DD /* GameScene.swift */,
+				565B17BA1F7E570600B1BB64 /* Ground.swift */,
+				565B17C01F7E664200B1BB64 /* YouWin.swift */,
+				565B17C21F7E665200B1BB64 /* YouWin.sks */,
+				565B17BC1F7E5C4600B1BB64 /* YouLose.swift */,
+				565B17BE1F7E5C6700B1BB64 /* YouLose.sks */,
+				5665E5B11F7E1F2D00311F21 /* SplashScreen.sks */,
 				5646856D1F7B135D008C01DD /* GameViewController.swift */,
-				56C8EC3C1F7CD13E00EEAD7A /* Zombie.swift */,
+				560B05361F7DF36100F7C3DB /* SplashScreen.swift */,
+				56C8EC3C1F7CD13E00EEAD7A /* zombieClass.swift */,
+				565B17B41F7E556F00B1BB64 /* dogWin.swift */,
+				565B17B61F7E557C00B1BB64 /* dogSleep.swift */,
+				565B17B81F7E558E00B1BB64 /* zombieDie.swift */,
+				560B05321F7DCDF800F7C3DB /* ritz.mp3 */,
 				5646856F1F7B135D008C01DD /* Main.storyboard */,
 				569F397B1F7B930200FFD083 /* dogWalkClass.swift */,
+				561B423E1F7CDDFB00019788 /* thesting.mp3 */,
 				564685721F7B135D008C01DD /* Assets.xcassets */,
 				564685741F7B135D008C01DD /* LaunchScreen.storyboard */,
 				564685771F7B135D008C01DD /* Info.plist */,
@@ -247,10 +285,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5665E5B21F7E23B400311F21 /* SplashScreen.sks in Resources */,
 				564685711F7B135D008C01DD /* Main.storyboard in Resources */,
+				565B17C31F7E665200B1BB64 /* YouWin.sks in Resources */,
 				564685731F7B135D008C01DD /* Assets.xcassets in Resources */,
+				560B05331F7DCF9200F7C3DB /* ritz.mp3 in Resources */,
 				5696F8AF1F7C55CB00C4DB16 /* MainScene.sks in Resources */,
+				565B17BF1F7E5C6700B1BB64 /* YouLose.sks in Resources */,
 				564685761F7B135D008C01DD /* LaunchScreen.storyboard in Resources */,
+				560B052D1F7CE63200F7C3DB /* thesting.mp3 in Resources */,
 				5646856A1F7B135D008C01DD /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,6 +302,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				560B052E1F7CE63300F7C3DB /* thesting.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +310,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				560B052F1F7CE63400F7C3DB /* thesting.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,11 +321,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				565B17B91F7E558E00B1BB64 /* zombieDie.swift in Sources */,
+				565B17BD1F7E5C4600B1BB64 /* YouLose.swift in Sources */,
+				565B17C11F7E664200B1BB64 /* YouWin.swift in Sources */,
+				560B05371F7DF36200F7C3DB /* SplashScreen.swift in Sources */,
 				569F397C1F7B930200FFD083 /* dogWalkClass.swift in Sources */,
 				5646856C1F7B135D008C01DD /* GameScene.swift in Sources */,
+				565B17BB1F7E570600B1BB64 /* Ground.swift in Sources */,
 				5646856E1F7B135D008C01DD /* GameViewController.swift in Sources */,
+				565B17B71F7E557C00B1BB64 /* dogSleep.swift in Sources */,
 				564685661F7B135C008C01DD /* AppDelegate.swift in Sources */,
-				56C8EC3D1F7CD13E00EEAD7A /* Zombie.swift in Sources */,
+				56C8EC3D1F7CD13E00EEAD7A /* zombieClass.swift in Sources */,
+				565B17B51F7E556F00B1BB64 /* dogWin.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
