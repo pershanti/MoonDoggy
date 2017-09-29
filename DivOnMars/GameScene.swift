@@ -57,17 +57,26 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
             }
             else if b.name == "mailman"{
-                b.removeFromParent()
-                self.updateHealth(by: -1)
-                self.slower()
-                print(self.health)
+                if contact.contactPoint.y > b.position.y{
+                    b.removeFromParent()
+                    
+                }
+                else{
+                    b.removeFromParent()
+                    self.updateHealth(by: -1)
+                    self.slower()
+                }
 
             }
             else if b.name == "cat"{
-                b.removeFromParent()
-                self.updateHealth(by: -2)
-                self.slower()
-                print(self.health)
+                if contact.contactPoint.y > b.position.y{
+                    b.removeFromParent()
+                }
+                else{
+                    b.removeFromParent()
+                    self.updateHealth(by: -1)
+                    self.slower()
+                }
             }
             
             else if b.name == "zombie"{
@@ -91,22 +100,34 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 
             }
             else if a.name == "mailman"{
-                a.removeFromParent()
-                self.updateHealth(by: -1)
-                self.slower()
-                print(self.health)
+                if contact.contactPoint.y > a.position.y{
+                    a.removeFromParent()
+                }
+                else{
+                    a.removeFromParent()
+                    self.updateHealth(by: -1)
+                    self.slower()
+                }
+                
                 
             }
             else if a.name == "cat"{
-                a.removeFromParent()
-                self.updateHealth(by: -2)
-                self.slower()
-                print(self.health)
+                if contact.contactPoint.y > a.position.y{
+                    a.removeFromParent()
+                    
+                }
+                else{
+                    a.removeFromParent()
+                    self.updateHealth(by: -1)
+                    self.slower()
+                }
             }
                 
             else if a.name == "zombie"{
                 self.winGame()
             }
+            
+            
             
         }
         
@@ -163,18 +184,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         dogsprite!.run(runFast)
     }
     
-    func forwardDodge(){
-        let slowDown = SKAction.moveBy(x: 50, y: 0, duration: 1)
-        let speedUp = SKAction.moveBy(x: -50, y: 0, duration: 1)
-        let sequence = SKAction.sequence([slowDown, speedUp])
+    func forwardDodge(amt: Double){
+        let speedUp = SKAction.moveBy(x: CGFloat(amt), y: 0, duration: 0.5)
+        let reset = SKAction.moveBy(x: -CGFloat(amt), y:0, duration: 0.5)
+        let wait = SKAction.wait(forDuration: 1)
+        let sequence = SKAction.sequence([speedUp, wait, reset])
         dogsprite!.run(sequence)
     }
     
-    func backwardDodge(){
-        let slowDown = SKAction.moveBy(x: -50, y: 0, duration: 1)
-        let speedUp = SKAction.moveBy(x: 50, y: 0, duration: 1)
-        let sequence = SKAction.sequence([slowDown, speedUp])
-        dogsprite!.run(sequence)
+    func backwardDodge(amt: Double){
+        let slowDown = SKAction.moveBy(x: CGFloat(amt), y: 0, duration: 0.5)
+        dogsprite!.run(slowDown)
     }
     
     func slower(){
@@ -219,13 +239,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         newSprite.name = sprite
         addChild(newSprite)
         var fly = SKAction()
+        var wait = SKAction()
         if sprite == "cat" || sprite == "mailman" {
             fly = SKAction.move(to: self.dogsprite!.position, duration: 4)
+            wait = SKAction.wait(forDuration: 4)
         }
         else{
-            fly = SKAction.move(to: self.dogsprite!.position, duration: 10)
+            fly = SKAction.move(to: self.dogsprite!.position, duration: 5)
+            wait = SKAction.wait(forDuration: 5)
         }
-        let wait = SKAction.wait(forDuration: 4)
+        
         let remove = SKAction.removeFromParent()
         let sequence = SKAction.sequence([fly, wait, remove])
         newSprite.run(sequence)
@@ -269,8 +292,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let dog = dogWalkClass()
         dogsprite = SKSpriteNode(texture: dog._01())
         let range = SKRange(upperLimit: 160)
+        let xrange = SKRange(lowerLimit: -340, upperLimit: 340)
         let lockToCenter = SKConstraint.positionY(range)
-        dogsprite!.constraints = [ lockToCenter ]
+        let lockx = SKConstraint.positionX(xrange)
+        dogsprite!.constraints = [ lockx, lockToCenter ]
         let walk = SKAction.animate(with: dog.walk(), timePerFrame: 0.033)
         let walkForever = SKAction.repeatForever(walk)
         dogsprite!.position = CGPoint(x: -200, y: 0)
@@ -331,17 +356,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             print("We have a motion manager \(manager)")
             if manager.isDeviceMotionAvailable {
                 let myq = OperationQueue()
-                manager.deviceMotionUpdateInterval = 1
+                manager.deviceMotionUpdateInterval = 0.1
                 manager.startDeviceMotionUpdates(to: myq){
                     (data: CMDeviceMotion?, error: Error?) in
                     if let mydata = data {
                         self.pitch = mydata.attitude.pitch
                         print(self.pitch)
-                        if self.pitch! > 0.3{
-                            self.backwardDodge()
+                        if self.pitch! < -0.3{
+                            self.backwardDodge(amt: 50*self.pitch!)
                         }
-                        else if self.pitch! < -0.3 {
-                            self.forwardDodge()
+                        else if self.pitch! > 0.3{
+                            self.forwardDodge(amt: 10*self.pitch!)
                         }
                     }
                 }
@@ -368,7 +393,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             dogsprite!.size.width = 200
             dogsprite!.position = CGPoint(x: 0, y: -175)
             addChild(dogsprite!)
-            self.endGame()
+            self.tooFat()
         }
         
         else if self.health > 0{
