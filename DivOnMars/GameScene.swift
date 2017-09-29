@@ -218,9 +218,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         newSprite.physicsBody?.allowsRotation = false
         newSprite.name = sprite
         addChild(newSprite)
-        let fly = SKAction.move(to: dogsprite!.position, duration: 5)
+        var fly = SKAction()
+        if sprite == "cat" || sprite == "mailman" {
+            fly = SKAction.move(to: self.dogsprite!.position, duration: 4)
+        }
+        else{
+            fly = SKAction.move(to: self.dogsprite!.position, duration: 10)
+        }
+        let wait = SKAction.wait(forDuration: 4)
         let remove = SKAction.removeFromParent()
-        let sequence = SKAction.sequence([fly, remove])
+        let sequence = SKAction.sequence([fly, wait, remove])
         newSprite.run(sequence)
     }
 
@@ -229,7 +236,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let create = SKAction.run { [unowned self] in
             self.displaySprites()
         }
-        let wait = SKAction.wait(forDuration: 10)
+        let wait = SKAction.wait(forDuration: 3)
         let sequence = SKAction.sequence([wait, create])
         let repeatForever = SKAction.repeatForever(sequence)
         run(repeatForever)
@@ -261,7 +268,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func createCharacter(){
         let dog = dogWalkClass()
         dogsprite = SKSpriteNode(texture: dog._01())
-        let range = SKRange(upperLimit: 200)
+        let range = SKRange(upperLimit: 160)
         let lockToCenter = SKConstraint.positionY(range)
         dogsprite!.constraints = [ lockToCenter ]
         let walk = SKAction.animate(with: dog.walk(), timePerFrame: 0.033)
