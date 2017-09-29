@@ -56,6 +56,7 @@
 		560B05321F7DCDF800F7C3DB /* ritz.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ritz.mp3; sourceTree = "<group>"; };
 		560B05361F7DF36100F7C3DB /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		561B423E1F7CDDFB00019788 /* thesting.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = thesting.mp3; path = DivOnMars/thesting.mp3; sourceTree = SOURCE_ROOT; };
+		562387831F7E6E420052D291 /* dogsout.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = dogsout.mp3; sourceTree = "<group>"; };
 		564685621F7B135C008C01DD /* MoonDoggy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoonDoggy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		564685651F7B135C008C01DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		564685691F7B135D008C01DD /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
@@ -138,6 +139,7 @@
 				5696F8AE1F7C55CB00C4DB16 /* MainScene.sks */,
 				5646856B1F7B135D008C01DD /* GameScene.swift */,
 				565B17BA1F7E570600B1BB64 /* Ground.swift */,
+				562387831F7E6E420052D291 /* dogsout.mp3 */,
 				565B17C01F7E664200B1BB64 /* YouWin.swift */,
 				565B17C21F7E665200B1BB64 /* YouWin.sks */,
 				565B17BC1F7E5C4600B1BB64 /* YouLose.swift */,

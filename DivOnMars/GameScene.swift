@@ -8,6 +8,7 @@
 
 import SpriteKit
 import GameplayKit
+import CoreMotion
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
@@ -16,7 +17,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var zombieSprite: SKSpriteNode?
     var healthSprite = SKSpriteNode()
     var groundSprite = Ground()
-    
+    var motionManager: CMMotionManager?
+    var pitch: Double?
+    let myq = OperationQueue()
     let array = ["bone", "cheese", "mailman", "bear"]
     var health = 0
     
@@ -25,75 +28,115 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var badCollisionCategory: UInt32 = 0x1 << 3
     var goodCollisionCategory: UInt32 = 0x1 << 4
 
+    
+    
     func bump(node: SKSpriteNode){
-        let jump = SKAction.moveBy(x: 0, y: 100, duration: 2)
+        let jump = SKAction.moveBy(x: 0, y: 200, duration: 1)
         node.run(jump)
     }
     
     
 
     func didBegin(_ contact: SKPhysicsContact) {
+        
         let a: SKSpriteNode = contact.bodyA.node as! SKSpriteNode
         let b: SKSpriteNode = contact.bodyB.node as! SKSpriteNode
 
-        if a == dogsprite || b == dogsprite{
-            if a.name == "bone" || b.name == "bone"{
-                print("bone")
+        if a == dogsprite {
+            if b.name == "bone"{
+                b.removeFromParent()
                 self.updateHealth(by: 1)
+                self.faster()
                 print(self.health)
             }
-            else if a.name == "cheese" || b.name == "cheese"{
-                print("cheese")
-                self.updateHealth(by: 2)
+            else if b.name == "cheese"{
+                b.removeFromParent()
+                self.updateHealth(by: 1)
+                self.faster()
                 print(self.health)
 
             }
-            else if a.name == "mailman" || b.name == "mailman"{
-                print("mailman")
+            else if b.name == "mailman"{
+                b.removeFromParent()
                 self.updateHealth(by: -1)
+                self.slower()
                 print(self.health)
 
             }
-            else if a.name == "bear" || b.name == "bear"{
-                print("bear")
-                groundSprite.stopGround(scene: self)
-                let runAway = SKAction.moveBy(x: 300, y: 0, duration: 2)
-                self.goToSleep()
-                zombieSprite?.run(runAway)
+            else if b.name == "bear"{
+                b.removeFromParent()
+                self.updateHealth(by: -2)
+                self.slower()
+                print(self.health)
             }
             
-            else if a.name == "zombie" || b.name == "zombie"{
+            else if b.name == "zombie"{
                 self.winGame()
             }
-            
-            if self.health == 0{
-                self.endGame()
-            }
-            
-            else if self.health == 10{
-                self.winGame()
-            }
+           
          }
+        
+        else if b == dogsprite{
+            if a.name == "bone"{
+                a.removeFromParent()
+                self.updateHealth(by: 1)
+                self.faster()
+                print(self.health)
+            }
+            else if a.name == "cheese"{
+                a.removeFromParent()
+                self.updateHealth(by: 1)
+                self.faster()
+                print(self.health)
+                
+            }
+            else if a.name == "mailman"{
+                a.removeFromParent()
+                self.updateHealth(by: -1)
+                self.slower()
+                print(self.health)
+                
+            }
+            else if a.name == "bear"{
+                a.removeFromParent()
+                self.updateHealth(by: -2)
+                self.slower()
+                print(self.health)
+            }
+                
+            else if a.name == "zombie"{
+                self.winGame()
+            }
+            
+        }
         
     }
     
     func winGame(){
-        let wait = SKAction.wait(forDuration: 4)
+        let wait = SKAction.wait(forDuration: 2)
         let change = SKAction.run{
+            if let viewC = self.viewController as! GameViewController? {
+            viewC.player.stop()
             let transition = SKTransition.doorsCloseVertical(withDuration: 2)
-            let scene = SKScene(fileNamed: "YouLose")!
+            let scene = SKScene(fileNamed: "YouWin")! as! YouWin
+            scene.viewController = viewC
             self.view?.presentScene(scene, transition:transition)
+            }
         }
         let sequence = SKAction.sequence([wait, change])
         run(sequence)
     }
     
     func endGame(){
-        let wait = SKAction.wait(forDuration: 4)
+        let wait = SKAction.wait(forDuration: 2)
         let change = SKAction.run{
-            let transition = SKTransition.doorsCloseVertical(withDuration: 2)
-            let scene = SKScene(fileNamed: "YouLose")!
-            self.view?.presentScene(scene, transition:transition)
+            if let viewC = self.viewController as! GameViewController? {
+                viewC.player.stop()
+                let transition = SKTransition.doorsCloseVertical(withDuration: 2)
+                let scene = SKScene(fileNamed: "YouLose")! as! YouLose
+                scene.viewController = viewC
+                self.view?.presentScene(scene, transition:transition)
+            }
         }
         let sequence = SKAction.sequence([wait, change])
         run(sequence)
@@ -104,11 +147,26 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         dogsprite!.run(runFast)
     }
     
+    func forwardDodge(){
+        let slowDown = SKAction.moveBy(x: 50, y: 0, duration: 1)
+        let speedUp = SKAction.moveBy(x: -50, y: 0, duration: 1)
+        let sequence = SKAction.sequence([slowDown, speedUp])
+        dogsprite!.run(sequence)
+    }
+    
+    func backwardDodge(){
+        let slowDown = SKAction.moveBy(x: -50, y: 0, duration: 1)
+        let speedUp = SKAction.moveBy(x: 50, y: 0, duration: 1)
+        let sequence = SKAction.sequence([slowDown, speedUp])
+        dogsprite!.run(sequence)
+    }
+    
     func slower(){
         let slowDown = SKAction.moveBy(x: -100, y: 0, duration: 1)
         let wait = SKAction.wait(forDuration: 5)
         let speedUp = SKAction.moveBy(x: 100, y: 0, duration: 1)
         let sequence = SKAction.sequence([slowDown, wait, speedUp])
+        dogsprite!.run(sequence)
     }
     
     func goToSleep(){
@@ -138,13 +196,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func createSprite(sprite: String){
        let newSprite = SKSpriteNode(imageNamed: sprite)
         newSprite.size = CGSize(width: 75, height: 75)
-        newSprite.position = CGPoint(x: 0, y: 0)
+        newSprite.position = CGPoint(x: Double(arc4random_uniform(720)) - 360, y: Double(arc4random_uniform(100)+200))
         newSprite.physicsBody = SKPhysicsBody(circleOfRadius: 10)
         newSprite.physicsBody?.affectedByGravity = false
         newSprite.physicsBody?.allowsRotation = false
         newSprite.name = sprite
         addChild(newSprite)
-        let fly = SKAction.moveBy(x:-250, y:-100, duration: 10)
+        let fly = SKAction.move(to: dogsprite!.position, duration: 5)
         let remove = SKAction.removeFromParent()
         let sequence = SKAction.sequence([fly, remove])
         newSprite.run(sequence)
@@ -226,7 +284,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     
-
     override func sceneDidLoad() {
         self.physicsWorld.gravity = CGVector(dx: 0, dy: -1.6)
         physicsWorld.contactDelegate = self
@@ -238,15 +295,52 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         addChild(healthSprite)
         self.health = 5
         displayHealth()
+        startMotion()
+        
     }
     
-    
+    func startMotion(){
+        motionManager = CMMotionManager()
+        if let manager = motionManager {
+            print("We have a motion manager \(manager)")
+            if manager.isDeviceMotionAvailable {
+                let myq = OperationQueue()
+                manager.deviceMotionUpdateInterval = 1
+                manager.startDeviceMotionUpdates(to: myq){
+                    (data: CMDeviceMotion?, error: Error?) in
+                    if let mydata = data {
+                        self.pitch = mydata.attitude.pitch
+                        print(self.pitch)
+                        if self.pitch! > 0.3{
+                            self.backwardDodge()
+                        }
+                        else if self.pitch! < -0.3 {
+                            self.forwardDodge()
+                        }
+                    }
+                }
+                
+            }
+            else { print("We cannot detect motion") }
+        }
+        else { print("No manager") }
+    }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         bump(node: dogsprite!)
     }
     
     func updateHealth(by: Int){
         self.health  = self.health + by
-        displayHealth()
+        if self.health <= 0{
+            self.endGame()
+        }
+        
+        else if self.health >= 10{
+            self.winGame()
+        }
+        
+        else if self.health > 0{
+            displayHealth()
+        }
     }
 }

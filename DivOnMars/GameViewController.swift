@@ -10,13 +10,16 @@ import UIKit
 import SpriteKit
 import GameplayKit
 import AVFoundation
+import CoreMotion
 
 class GameViewController: UIViewController {
     
     var player = AVAudioPlayer()
     var path =  Bundle.main.path(forResource: "thesting", ofType: "mp3")
     var isPlaying = false
-
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         do {
@@ -26,7 +29,6 @@ class GameViewController: UIViewController {
         }
         
         play()
-        
         let scene = SKScene(fileNamed: "SplashScreen")! as! SplashScreen
         scene.viewController = self
         let skView = self.view as! SKView

@@ -1,10 +1,10 @@
 
 import UIKit
 import SpriteKit
+import CoreMotion
 
 class SplashScreen: SKScene {
     var viewController: UIViewController?
-    
     override func sceneDidLoad() {
         
     }
