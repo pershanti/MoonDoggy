@@ -18,7 +18,6 @@
 		5646856E1F7B135D008C01DD /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5646856D1F7B135D008C01DD /* GameViewController.swift */; };
 		564685711F7B135D008C01DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5646856F1F7B135D008C01DD /* Main.storyboard */; };
 		564685731F7B135D008C01DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 564685721F7B135D008C01DD /* Assets.xcassets */; };
-		564685761F7B135D008C01DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 564685741F7B135D008C01DD /* LaunchScreen.storyboard */; };
 		564685811F7B135D008C01DD /* DivOnMarsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564685801F7B135D008C01DD /* DivOnMarsTests.swift */; };
 		5646858C1F7B135D008C01DD /* DivOnMarsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5646858B1F7B135D008C01DD /* DivOnMarsUITests.swift */; };
 		565B17B51F7E556F00B1BB64 /* dogWin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565B17B41F7E556F00B1BB64 /* dogWin.swift */; };
@@ -66,7 +65,6 @@
 		5646856D1F7B135D008C01DD /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		564685701F7B135D008C01DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		564685721F7B135D008C01DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		564685751F7B135D008C01DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		564685771F7B135D008C01DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5646857C1F7B135D008C01DD /* MoonDoggyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoonDoggyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		564685801F7B135D008C01DD /* DivOnMarsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DivOnMarsTests.swift; sourceTree = "<group>"; };
@@ -162,7 +160,6 @@
 				569F397B1F7B930200FFD083 /* dogWalkClass.swift */,
 				561B423E1F7CDDFB00019788 /* thesting.mp3 */,
 				564685721F7B135D008C01DD /* Assets.xcassets */,
-				564685741F7B135D008C01DD /* LaunchScreen.storyboard */,
 				564685771F7B135D008C01DD /* Info.plist */,
 			);
 			path = DivOnMars;
@@ -300,7 +297,6 @@
 				560B05331F7DCF9200F7C3DB /* ritz.mp3 in Resources */,
 				5696F8AF1F7C55CB00C4DB16 /* MainScene.sks in Resources */,
 				565B17BF1F7E5C6700B1BB64 /* YouLose.sks in Resources */,
-				564685761F7B135D008C01DD /* LaunchScreen.storyboard in Resources */,
 				56774FA71F7E8EF1005FEDCF /* TooFat.sks in Resources */,
 				560B052D1F7CE63200F7C3DB /* thesting.mp3 in Resources */,
 				5646856A1F7B135D008C01DD /* Actions.sks in Resources */,
@@ -384,14 +380,6 @@
 				564685701F7B135D008C01DD /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		564685741F7B135D008C01DD /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				564685751F7B135D008C01DD /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

@@ -236,6 +236,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         newSprite.physicsBody = SKPhysicsBody(circleOfRadius: 10)
         newSprite.physicsBody?.affectedByGravity = false
         newSprite.physicsBody?.allowsRotation = false
+        newSprite.physicsBody?.usesPreciseCollisionDetection = true
         newSprite.name = sprite
         addChild(newSprite)
         var fly = SKAction()
@@ -306,6 +307,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         dogsprite!.physicsBody?.affectedByGravity = true
         dogsprite!.physicsBody?.allowsRotation = false
         dogsprite!.physicsBody?.mass = 13
+        dogsprite!.physicsBody?.usesPreciseCollisionDetection = true
         dogsprite!.physicsBody?.categoryBitMask = dogCollisionCategory
         dogsprite!.physicsBody!.contactTestBitMask = dogsprite!.physicsBody!.collisionBitMask
         addChild(dogsprite!)
