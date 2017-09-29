@@ -242,12 +242,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         var fly = SKAction()
         var wait = SKAction()
         if sprite == "cat" || sprite == "mailman" {
-            fly = SKAction.move(to: self.dogsprite!.position, duration: 4)
-            wait = SKAction.wait(forDuration: 4)
+            fly = SKAction.move(to: self.dogsprite!.position, duration: 6)
+            wait = SKAction.wait(forDuration: 6)
         }
         else{
-            fly = SKAction.move(to: self.dogsprite!.position, duration: 5)
-            wait = SKAction.wait(forDuration: 5)
+            fly = SKAction.move(to: self.dogsprite!.position, duration: 7)
+            wait = SKAction.wait(forDuration: 7)
         }
         
         let remove = SKAction.removeFromParent()
@@ -306,7 +306,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         dogsprite!.physicsBody = SKPhysicsBody(circleOfRadius: 20)
         dogsprite!.physicsBody?.affectedByGravity = true
         dogsprite!.physicsBody?.allowsRotation = false
-        dogsprite!.physicsBody?.mass = 13
+        dogsprite!.physicsBody?.mass = 30
         dogsprite!.physicsBody?.usesPreciseCollisionDetection = true
         dogsprite!.physicsBody?.categoryBitMask = dogCollisionCategory
         dogsprite!.physicsBody!.contactTestBitMask = dogsprite!.physicsBody!.collisionBitMask

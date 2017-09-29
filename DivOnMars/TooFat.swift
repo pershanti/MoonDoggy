@@ -11,7 +11,7 @@ import UIKit
 import SpriteKit
 
 class TooFat: SKScene {
-    var viewController: UIViewController?
+    var viewController: GameViewController?
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let scene = self
         let touch = touches.first!
@@ -23,6 +23,7 @@ class TooFat: SKScene {
             let transition = SKTransition.doorsOpenVertical(withDuration: 0.5)
             let scene = SKScene(fileNamed: "MainScene")! as! GameScene
             scene.viewController = viewController
+            viewController?.player.play()
             self.view!.presentScene(scene, transition: transition)
         }
     }
