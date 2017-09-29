@@ -20,7 +20,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var motionManager: CMMotionManager?
     var pitch: Double?
     let myq = OperationQueue()
-    let array = ["bone", "cheese", "mailman", "bear"]
+    let array = ["bone", "cheese", "mailman", "cat"]
     var health = 0
     
     var groundCollisionCategory: UInt32 = 0x1 << 1
@@ -63,7 +63,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 print(self.health)
 
             }
-            else if b.name == "bear"{
+            else if b.name == "cat"{
                 b.removeFromParent()
                 self.updateHealth(by: -2)
                 self.slower()
@@ -97,7 +97,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 print(self.health)
                 
             }
-            else if a.name == "bear"{
+            else if a.name == "cat"{
                 a.removeFromParent()
                 self.updateHealth(by: -2)
                 self.slower()
@@ -113,7 +113,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func winGame(){
-        let wait = SKAction.wait(forDuration: 2)
+        let wait = SKAction.wait(forDuration: 0.5)
         let change = SKAction.run{
             if let viewC = self.viewController as! GameViewController? {
             viewC.player.stop()
@@ -140,6 +140,22 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
         let sequence = SKAction.sequence([wait, change])
         run(sequence)
+    }
+    
+    func tooFat(){
+        let wait = SKAction.wait(forDuration: 2)
+        let change = SKAction.run{
+            if let viewC = self.viewController as! GameViewController? {
+                viewC.player.stop()
+                let transition = SKTransition.doorsCloseVertical(withDuration: 2)
+                let scene = SKScene(fileNamed: "TooFat")! as! TooFat
+                scene.viewController = viewC
+                self.view?.presentScene(scene, transition:transition)
+            }
+        }
+        let sequence = SKAction.sequence([wait, change])
+        run(sequence)
+        
     }
     
     func faster(){
@@ -272,6 +288,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         zombieSprite!.constraints = [ lockToCenter ]
         let walk = SKAction.animate(with: new_zombie.walk(), timePerFrame: 0.033)
         let walkForever = SKAction.repeatForever(walk)
+        zombieSprite!.name = "zombie"
         zombieSprite!.position = CGPoint(x: 150, y: 0)
         zombieSprite!.zPosition = 0
         zombieSprite!.size.height = 150
@@ -279,6 +296,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         zombieSprite!.physicsBody = SKPhysicsBody(circleOfRadius: 20)
         zombieSprite!.physicsBody?.affectedByGravity = true
         zombieSprite!.physicsBody?.mass = 40
+        zombieSprite!.physicsBody?.categoryBitMask = groundCollisionCategory
+        zombieSprite!.physicsBody?.contactTestBitMask = zombieSprite!.physicsBody!.collisionBitMask
         addChild(zombieSprite!)
         zombieSprite!.run(walkForever)
     }
@@ -336,7 +355,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
         
         else if self.health >= 10{
-            self.winGame()
+            dogsprite!.removeFromParent()
+            dogsprite = SKSpriteNode(imageNamed:"36")
+            dogsprite!.size.height = 200
+            dogsprite!.size.width = 200
+            dogsprite!.position = CGPoint(x: 0, y: -175)
+            addChild(dogsprite!)
+            self.endGame()
         }
         
         else if self.health > 0{

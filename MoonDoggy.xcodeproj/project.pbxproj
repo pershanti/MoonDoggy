@@ -30,6 +30,8 @@
 		565B17C11F7E664200B1BB64 /* YouWin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565B17C01F7E664200B1BB64 /* YouWin.swift */; };
 		565B17C31F7E665200B1BB64 /* YouWin.sks in Resources */ = {isa = PBXBuildFile; fileRef = 565B17C21F7E665200B1BB64 /* YouWin.sks */; };
 		5665E5B21F7E23B400311F21 /* SplashScreen.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5665E5B11F7E1F2D00311F21 /* SplashScreen.sks */; };
+		56774FA71F7E8EF1005FEDCF /* TooFat.sks in Resources */ = {isa = PBXBuildFile; fileRef = 56774FA61F7E8EF1005FEDCF /* TooFat.sks */; };
+		56774FA91F7E8F59005FEDCF /* TooFat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56774FA81F7E8F59005FEDCF /* TooFat.swift */; };
 		5696F8AF1F7C55CB00C4DB16 /* MainScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5696F8AE1F7C55CB00C4DB16 /* MainScene.sks */; };
 		569F397C1F7B930200FFD083 /* dogWalkClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569F397B1F7B930200FFD083 /* dogWalkClass.swift */; };
 		56C8EC3D1F7CD13E00EEAD7A /* zombieClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C8EC3C1F7CD13E00EEAD7A /* zombieClass.swift */; };
@@ -81,6 +83,8 @@
 		565B17C01F7E664200B1BB64 /* YouWin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouWin.swift; sourceTree = "<group>"; };
 		565B17C21F7E665200B1BB64 /* YouWin.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = YouWin.sks; sourceTree = "<group>"; };
 		5665E5B11F7E1F2D00311F21 /* SplashScreen.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SplashScreen.sks; sourceTree = "<group>"; };
+		56774FA61F7E8EF1005FEDCF /* TooFat.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = TooFat.sks; sourceTree = "<group>"; };
+		56774FA81F7E8F59005FEDCF /* TooFat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TooFat.swift; sourceTree = "<group>"; };
 		5696F8AE1F7C55CB00C4DB16 /* MainScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MainScene.sks; sourceTree = "<group>"; };
 		569F397B1F7B930200FFD083 /* dogWalkClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dogWalkClass.swift; sourceTree = "<group>"; };
 		56C8EC3C1F7CD13E00EEAD7A /* zombieClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zombieClass.swift; sourceTree = "<group>"; };
@@ -144,6 +148,8 @@
 				565B17C21F7E665200B1BB64 /* YouWin.sks */,
 				565B17BC1F7E5C4600B1BB64 /* YouLose.swift */,
 				565B17BE1F7E5C6700B1BB64 /* YouLose.sks */,
+				56774FA61F7E8EF1005FEDCF /* TooFat.sks */,
+				56774FA81F7E8F59005FEDCF /* TooFat.swift */,
 				5665E5B11F7E1F2D00311F21 /* SplashScreen.sks */,
 				5646856D1F7B135D008C01DD /* GameViewController.swift */,
 				560B05361F7DF36100F7C3DB /* SplashScreen.swift */,
@@ -295,6 +301,7 @@
 				5696F8AF1F7C55CB00C4DB16 /* MainScene.sks in Resources */,
 				565B17BF1F7E5C6700B1BB64 /* YouLose.sks in Resources */,
 				564685761F7B135D008C01DD /* LaunchScreen.storyboard in Resources */,
+				56774FA71F7E8EF1005FEDCF /* TooFat.sks in Resources */,
 				560B052D1F7CE63200F7C3DB /* thesting.mp3 in Resources */,
 				5646856A1F7B135D008C01DD /* Actions.sks in Resources */,
 			);
@@ -330,6 +337,7 @@
 				569F397C1F7B930200FFD083 /* dogWalkClass.swift in Sources */,
 				5646856C1F7B135D008C01DD /* GameScene.swift in Sources */,
 				565B17BB1F7E570600B1BB64 /* Ground.swift in Sources */,
+				56774FA91F7E8F59005FEDCF /* TooFat.swift in Sources */,
 				5646856E1F7B135D008C01DD /* GameViewController.swift in Sources */,
 				565B17B71F7E557C00B1BB64 /* dogSleep.swift in Sources */,
 				564685661F7B135C008C01DD /* AppDelegate.swift in Sources */,
