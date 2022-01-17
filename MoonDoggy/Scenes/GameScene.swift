@@ -1,6 +1,6 @@
 //
 //  GameScene.swift
-//  DivOnMars
+//  MoonDoggy
 //
 //  Created by Shantini Vyas on 9/26/17.
 //  Copyright © 2017 Shantini Vyas. All rights reserved.
@@ -206,14 +206,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func goToSleep(){
-        let position = dogsprite?.position
         let size = dogsprite?.size
         dogsprite?.removeFromParent()
         let dog = dogSleep()
         let drift = SKAction.move(to: CGPoint(x: -200, y:-360), duration: 3)
         let sleep = SKAction.animate(with: dog.walk(), timePerFrame: 0.33)
         dogsprite = SKSpriteNode(texture: dog._00())
-        dogsprite!.position = position!
+        dogsprite!.position = CGPoint(x: 0, y:0)
         dogsprite!.size = size!
         addChild(dogsprite!)
         let sequence = SKAction.sequence([drift, sleep])
@@ -231,7 +230,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     func createSprite(sprite: String){
        let newSprite = SKSpriteNode(imageNamed: sprite)
-        newSprite.size = CGSize(width: 75, height: 75)
+        newSprite.size = CGSize(width: 50, height: 50)
         newSprite.position = CGPoint(x: Double(arc4random_uniform(720)) - 360, y: Double(arc4random_uniform(100)+200))
         newSprite.physicsBody = SKPhysicsBody(circleOfRadius: 10)
         newSprite.physicsBody?.affectedByGravity = false
@@ -279,7 +278,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             satellite.size.height = 100
             satellite.size.width = 736
             satellite.position = CGPoint(x: (736 * CGFloat(i)) - CGFloat(1 * i), y: 0)
-            satellite.zPosition = -5
+            satellite.zPosition = -5 
             addChild(satellite)
             let moveLeft = SKAction.moveBy(x: -736, y: 0, duration: 10)
             let moveReset = SKAction.moveBy(x: 736, y: 0, duration: 0)
@@ -299,10 +298,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         dogsprite!.constraints = [ lockx, lockToCenter ]
         let walk = SKAction.animate(with: dog.walk(), timePerFrame: 0.033)
         let walkForever = SKAction.repeatForever(walk)
-        dogsprite!.position = CGPoint(x: -200, y: 0)
+        dogsprite!.position = CGPoint(x: -300, y: 0)
         dogsprite!.zPosition = 0
-        dogsprite!.size.height = 150
-        dogsprite!.size.width = 150
+        dogsprite!.size.height = 100
+        dogsprite!.size.width = 100
         dogsprite!.physicsBody = SKPhysicsBody(circleOfRadius: 20)
         dogsprite!.physicsBody?.affectedByGravity = true
         dogsprite!.physicsBody?.allowsRotation = false
@@ -323,10 +322,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let walk = SKAction.animate(with: new_zombie.walk(), timePerFrame: 0.033)
         let walkForever = SKAction.repeatForever(walk)
         zombieSprite!.name = "zombie"
-        zombieSprite!.position = CGPoint(x: 150, y: 0)
+        zombieSprite!.position = CGPoint(x: 180, y: 0)
         zombieSprite!.zPosition = 0
-        zombieSprite!.size.height = 150
-        zombieSprite!.size.width = 150
+        zombieSprite!.size.height = 100
+        zombieSprite!.size.width = 100
         zombieSprite!.physicsBody = SKPhysicsBody(circleOfRadius: 20)
         zombieSprite!.physicsBody?.affectedByGravity = true
         zombieSprite!.physicsBody?.mass = 40
@@ -363,7 +362,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     (data: CMDeviceMotion?, error: Error?) in
                     if let mydata = data {
                         self.pitch = mydata.attitude.pitch
-                        print(self.pitch)
                         if self.pitch! < -0.3{
                             self.backwardDodge(amt: 50*self.pitch!)
                         }
@@ -393,7 +391,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             dogsprite = SKSpriteNode(imageNamed:"36")
             dogsprite!.size.height = 200
             dogsprite!.size.width = 200
-            dogsprite!.position = CGPoint(x: 0, y: -175)
+            dogsprite!.position = CGPoint(x: 0, y: 0)
             addChild(dogsprite!)
             self.tooFat()
         }

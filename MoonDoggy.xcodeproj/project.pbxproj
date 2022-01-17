@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		560B052D1F7CE63200F7C3DB /* thesting.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 561B423E1F7CDDFB00019788 /* thesting.mp3 */; };
-		560B052E1F7CE63300F7C3DB /* thesting.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 561B423E1F7CDDFB00019788 /* thesting.mp3 */; };
-		560B052F1F7CE63400F7C3DB /* thesting.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 561B423E1F7CDDFB00019788 /* thesting.mp3 */; };
 		560B05331F7DCF9200F7C3DB /* ritz.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 560B05321F7DCDF800F7C3DB /* ritz.mp3 */; };
 		560B05371F7DF36200F7C3DB /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560B05361F7DF36100F7C3DB /* SplashScreen.swift */; };
 		564685661F7B135C008C01DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564685651F7B135C008C01DD /* AppDelegate.swift */; };
@@ -18,8 +16,6 @@
 		5646856E1F7B135D008C01DD /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5646856D1F7B135D008C01DD /* GameViewController.swift */; };
 		564685711F7B135D008C01DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5646856F1F7B135D008C01DD /* Main.storyboard */; };
 		564685731F7B135D008C01DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 564685721F7B135D008C01DD /* Assets.xcassets */; };
-		564685811F7B135D008C01DD /* DivOnMarsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564685801F7B135D008C01DD /* DivOnMarsTests.swift */; };
-		5646858C1F7B135D008C01DD /* DivOnMarsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5646858B1F7B135D008C01DD /* DivOnMarsUITests.swift */; };
 		565B17B51F7E556F00B1BB64 /* dogWin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565B17B41F7E556F00B1BB64 /* dogWin.swift */; };
 		565B17B71F7E557C00B1BB64 /* dogSleep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565B17B61F7E557C00B1BB64 /* dogSleep.swift */; };
 		565B17B91F7E558E00B1BB64 /* zombieDie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565B17B81F7E558E00B1BB64 /* zombieDie.swift */; };
@@ -34,29 +30,13 @@
 		5696F8AF1F7C55CB00C4DB16 /* MainScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5696F8AE1F7C55CB00C4DB16 /* MainScene.sks */; };
 		569F397C1F7B930200FFD083 /* dogWalkClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569F397B1F7B930200FFD083 /* dogWalkClass.swift */; };
 		56C8EC3D1F7CD13E00EEAD7A /* zombieClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C8EC3C1F7CD13E00EEAD7A /* zombieClass.swift */; };
+		56E617311F81C33700922A45 /* Instructions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 56E617301F81C33700922A45 /* Instructions.sks */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		5646857D1F7B135D008C01DD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5646855A1F7B135C008C01DD /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 564685611F7B135C008C01DD;
-			remoteInfo = DivOnMars;
-		};
-		564685881F7B135D008C01DD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5646855A1F7B135C008C01DD /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 564685611F7B135C008C01DD;
-			remoteInfo = DivOnMars;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		560B05321F7DCDF800F7C3DB /* ritz.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ritz.mp3; sourceTree = "<group>"; };
 		560B05361F7DF36100F7C3DB /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
-		561B423E1F7CDDFB00019788 /* thesting.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = thesting.mp3; path = DivOnMars/thesting.mp3; sourceTree = SOURCE_ROOT; };
+		561B423E1F7CDDFB00019788 /* thesting.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = thesting.mp3; path = Audio/thesting.mp3; sourceTree = SOURCE_ROOT; };
 		562387831F7E6E420052D291 /* dogsout.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = dogsout.mp3; sourceTree = "<group>"; };
 		564685621F7B135C008C01DD /* MoonDoggy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoonDoggy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		564685651F7B135C008C01DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -66,12 +46,6 @@
 		564685701F7B135D008C01DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		564685721F7B135D008C01DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		564685771F7B135D008C01DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5646857C1F7B135D008C01DD /* MoonDoggyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoonDoggyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		564685801F7B135D008C01DD /* DivOnMarsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DivOnMarsTests.swift; sourceTree = "<group>"; };
-		564685821F7B135D008C01DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		564685871F7B135D008C01DD /* MoonDoggyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoonDoggyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5646858B1F7B135D008C01DD /* DivOnMarsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DivOnMarsUITests.swift; sourceTree = "<group>"; };
-		5646858D1F7B135D008C01DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		565B17B41F7E556F00B1BB64 /* dogWin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dogWin.swift; sourceTree = "<group>"; };
 		565B17B61F7E557C00B1BB64 /* dogSleep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dogSleep.swift; sourceTree = "<group>"; };
 		565B17B81F7E558E00B1BB64 /* zombieDie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zombieDie.swift; sourceTree = "<group>"; };
@@ -86,6 +60,7 @@
 		5696F8AE1F7C55CB00C4DB16 /* MainScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MainScene.sks; sourceTree = "<group>"; };
 		569F397B1F7B930200FFD083 /* dogWalkClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dogWalkClass.swift; sourceTree = "<group>"; };
 		56C8EC3C1F7CD13E00EEAD7A /* zombieClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zombieClass.swift; sourceTree = "<group>"; };
+		56E617301F81C33700922A45 /* Instructions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Instructions.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,29 +71,65 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		564685791F7B135D008C01DD /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		564685841F7B135D008C01DD /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		432FA9422795EA8B005EC2E6 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				5646856B1F7B135D008C01DD /* GameScene.swift */,
+				565B17BA1F7E570600B1BB64 /* Ground.swift */,
+				565B17C01F7E664200B1BB64 /* YouWin.swift */,
+				565B17BC1F7E5C4600B1BB64 /* YouLose.swift */,
+				56774FA81F7E8F59005FEDCF /* TooFat.swift */,
+				560B05361F7DF36100F7C3DB /* SplashScreen.swift */,
+				564685691F7B135D008C01DD /* Actions.sks */,
+				5696F8AE1F7C55CB00C4DB16 /* MainScene.sks */,
+				56E617301F81C33700922A45 /* Instructions.sks */,
+				565B17C21F7E665200B1BB64 /* YouWin.sks */,
+				565B17BE1F7E5C6700B1BB64 /* YouLose.sks */,
+				56774FA61F7E8EF1005FEDCF /* TooFat.sks */,
+				5665E5B11F7E1F2D00311F21 /* SplashScreen.sks */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		432FA9432795EA99005EC2E6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5646856F1F7B135D008C01DD /* Main.storyboard */,
+				5646856D1F7B135D008C01DD /* GameViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		432FA9442795EAC1005EC2E6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				569F397B1F7B930200FFD083 /* dogWalkClass.swift */,
+				56C8EC3C1F7CD13E00EEAD7A /* zombieClass.swift */,
+				565B17B41F7E556F00B1BB64 /* dogWin.swift */,
+				565B17B61F7E557C00B1BB64 /* dogSleep.swift */,
+				565B17B81F7E558E00B1BB64 /* zombieDie.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		432FA9452795EAE9005EC2E6 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				562387831F7E6E420052D291 /* dogsout.mp3 */,
+				560B05321F7DCDF800F7C3DB /* ritz.mp3 */,
+				561B423E1F7CDDFB00019788 /* thesting.mp3 */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
 		564685591F7B135C008C01DD = {
 			isa = PBXGroup;
 			children = (
-				564685641F7B135C008C01DD /* DivOnMars */,
-				5646857F1F7B135D008C01DD /* DivOnMarsTests */,
-				5646858A1F7B135D008C01DD /* DivOnMarsUITests */,
+				432FA9452795EAE9005EC2E6 /* Audio */,
+				564685641F7B135C008C01DD /* MoonDoggy */,
 				564685631F7B135C008C01DD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -127,60 +138,21 @@
 			isa = PBXGroup;
 			children = (
 				564685621F7B135C008C01DD /* MoonDoggy.app */,
-				5646857C1F7B135D008C01DD /* MoonDoggyTests.xctest */,
-				564685871F7B135D008C01DD /* MoonDoggyUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		564685641F7B135C008C01DD /* DivOnMars */ = {
+		564685641F7B135C008C01DD /* MoonDoggy */ = {
 			isa = PBXGroup;
 			children = (
 				564685651F7B135C008C01DD /* AppDelegate.swift */,
-				564685691F7B135D008C01DD /* Actions.sks */,
-				5696F8AE1F7C55CB00C4DB16 /* MainScene.sks */,
-				5646856B1F7B135D008C01DD /* GameScene.swift */,
-				565B17BA1F7E570600B1BB64 /* Ground.swift */,
-				562387831F7E6E420052D291 /* dogsout.mp3 */,
-				565B17C01F7E664200B1BB64 /* YouWin.swift */,
-				565B17C21F7E665200B1BB64 /* YouWin.sks */,
-				565B17BC1F7E5C4600B1BB64 /* YouLose.swift */,
-				565B17BE1F7E5C6700B1BB64 /* YouLose.sks */,
-				56774FA61F7E8EF1005FEDCF /* TooFat.sks */,
-				56774FA81F7E8F59005FEDCF /* TooFat.swift */,
-				5665E5B11F7E1F2D00311F21 /* SplashScreen.sks */,
-				5646856D1F7B135D008C01DD /* GameViewController.swift */,
-				560B05361F7DF36100F7C3DB /* SplashScreen.swift */,
-				56C8EC3C1F7CD13E00EEAD7A /* zombieClass.swift */,
-				565B17B41F7E556F00B1BB64 /* dogWin.swift */,
-				565B17B61F7E557C00B1BB64 /* dogSleep.swift */,
-				565B17B81F7E558E00B1BB64 /* zombieDie.swift */,
-				560B05321F7DCDF800F7C3DB /* ritz.mp3 */,
-				5646856F1F7B135D008C01DD /* Main.storyboard */,
-				569F397B1F7B930200FFD083 /* dogWalkClass.swift */,
-				561B423E1F7CDDFB00019788 /* thesting.mp3 */,
+				432FA9442795EAC1005EC2E6 /* Models */,
+				432FA9432795EA99005EC2E6 /* Views */,
+				432FA9422795EA8B005EC2E6 /* Scenes */,
 				564685721F7B135D008C01DD /* Assets.xcassets */,
 				564685771F7B135D008C01DD /* Info.plist */,
 			);
-			path = DivOnMars;
-			sourceTree = "<group>";
-		};
-		5646857F1F7B135D008C01DD /* DivOnMarsTests */ = {
-			isa = PBXGroup;
-			children = (
-				564685801F7B135D008C01DD /* DivOnMarsTests.swift */,
-				564685821F7B135D008C01DD /* Info.plist */,
-			);
-			path = DivOnMarsTests;
-			sourceTree = "<group>";
-		};
-		5646858A1F7B135D008C01DD /* DivOnMarsUITests */ = {
-			isa = PBXGroup;
-			children = (
-				5646858B1F7B135D008C01DD /* DivOnMarsUITests.swift */,
-				5646858D1F7B135D008C01DD /* Info.plist */,
-			);
-			path = DivOnMarsUITests;
+			path = MoonDoggy;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,42 +175,6 @@
 			productReference = 564685621F7B135C008C01DD /* MoonDoggy.app */;
 			productType = "com.apple.product-type.application";
 		};
-		5646857B1F7B135D008C01DD /* MoonDoggyTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 564685931F7B135D008C01DD /* Build configuration list for PBXNativeTarget "MoonDoggyTests" */;
-			buildPhases = (
-				564685781F7B135D008C01DD /* Sources */,
-				564685791F7B135D008C01DD /* Frameworks */,
-				5646857A1F7B135D008C01DD /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5646857E1F7B135D008C01DD /* PBXTargetDependency */,
-			);
-			name = MoonDoggyTests;
-			productName = DivOnMarsTests;
-			productReference = 5646857C1F7B135D008C01DD /* MoonDoggyTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		564685861F7B135D008C01DD /* MoonDoggyUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 564685961F7B135D008C01DD /* Build configuration list for PBXNativeTarget "MoonDoggyUITests" */;
-			buildPhases = (
-				564685831F7B135D008C01DD /* Sources */,
-				564685841F7B135D008C01DD /* Frameworks */,
-				564685851F7B135D008C01DD /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				564685891F7B135D008C01DD /* PBXTargetDependency */,
-			);
-			name = MoonDoggyUITests;
-			productName = DivOnMarsUITests;
-			productReference = 564685871F7B135D008C01DD /* MoonDoggyUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -252,16 +188,6 @@
 					564685611F7B135C008C01DD = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
-					};
-					5646857B1F7B135D008C01DD = {
-						CreatedOnToolsVersion = 9.0;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 564685611F7B135C008C01DD;
-					};
-					564685861F7B135D008C01DD = {
-						CreatedOnToolsVersion = 9.0;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 564685611F7B135C008C01DD;
 					};
 				};
 			};
@@ -279,8 +205,6 @@
 			projectRoot = "";
 			targets = (
 				564685611F7B135C008C01DD /* MoonDoggy */,
-				5646857B1F7B135D008C01DD /* MoonDoggyTests */,
-				564685861F7B135D008C01DD /* MoonDoggyUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -299,23 +223,8 @@
 				565B17BF1F7E5C6700B1BB64 /* YouLose.sks in Resources */,
 				56774FA71F7E8EF1005FEDCF /* TooFat.sks in Resources */,
 				560B052D1F7CE63200F7C3DB /* thesting.mp3 in Resources */,
+				56E617311F81C33700922A45 /* Instructions.sks in Resources */,
 				5646856A1F7B135D008C01DD /* Actions.sks in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5646857A1F7B135D008C01DD /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				560B052E1F7CE63300F7C3DB /* thesting.mp3 in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		564685851F7B135D008C01DD /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				560B052F1F7CE63400F7C3DB /* thesting.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,36 +251,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		564685781F7B135D008C01DD /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				564685811F7B135D008C01DD /* DivOnMarsTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		564685831F7B135D008C01DD /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5646858C1F7B135D008C01DD /* DivOnMarsUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		5646857E1F7B135D008C01DD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 564685611F7B135C008C01DD /* MoonDoggy */;
-			targetProxy = 5646857D1F7B135D008C01DD /* PBXContainerItemProxy */;
-		};
-		564685891F7B135D008C01DD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 564685611F7B135C008C01DD /* MoonDoggy */;
-			targetProxy = 564685881F7B135D008C01DD /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		5646856F1F7B135D008C01DD /* Main.storyboard */ = {
@@ -498,9 +378,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LVLYB83ZJM;
-				INFOPLIST_FILE = DivOnMars/Info.plist;
+				INFOPLIST_FILE = MoonDoggy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.DivOnMars;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MoonDoggy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -513,78 +393,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LVLYB83ZJM;
-				INFOPLIST_FILE = DivOnMars/Info.plist;
+				INFOPLIST_FILE = MoonDoggy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.DivOnMars;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MoonDoggy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		564685941F7B135D008C01DD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LVLYB83ZJM;
-				INFOPLIST_FILE = DivOnMarsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.DivOnMarsTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MoonDoggy.app/MoonDoggy";
-			};
-			name = Debug;
-		};
-		564685951F7B135D008C01DD /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LVLYB83ZJM;
-				INFOPLIST_FILE = DivOnMarsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.DivOnMarsTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MoonDoggy.app/MoonDoggy";
-			};
-			name = Release;
-		};
-		564685971F7B135D008C01DD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LVLYB83ZJM;
-				INFOPLIST_FILE = DivOnMarsUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.DivOnMarsUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = DivOnMars;
-			};
-			name = Debug;
-		};
-		564685981F7B135D008C01DD /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LVLYB83ZJM;
-				INFOPLIST_FILE = DivOnMarsUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.DivOnMarsUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = DivOnMars;
 			};
 			name = Release;
 		};
@@ -605,24 +419,6 @@
 			buildConfigurations = (
 				564685911F7B135D008C01DD /* Debug */,
 				564685921F7B135D008C01DD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		564685931F7B135D008C01DD /* Build configuration list for PBXNativeTarget "MoonDoggyTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				564685941F7B135D008C01DD /* Debug */,
-				564685951F7B135D008C01DD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		564685961F7B135D008C01DD /* Build configuration list for PBXNativeTarget "MoonDoggyUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				564685971F7B135D008C01DD /* Debug */,
-				564685981F7B135D008C01DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

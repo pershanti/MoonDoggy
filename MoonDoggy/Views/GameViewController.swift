@@ -1,6 +1,6 @@
 //
 //  GameViewController.swift
-//  DivOnMars
+//  MoonDoggy
 //
 //  Created by Shantini Vyas on 9/26/17.
 //  Copyright © 2017 Shantini Vyas. All rights reserved.
